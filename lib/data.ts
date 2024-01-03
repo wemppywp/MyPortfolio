@@ -35,56 +35,65 @@ export const links = [
 
 export const experiencesData = [
     {
-        title: "Graduated bootcamp",
-        location: "Miami, FL",
+        title: "Intership at PT Digitdata Terminal Evolution",
+        location: "Medan, Indonesia",
         description:
-            "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+            "Interned as an Android developer, where I learned and helped employees in developing IoT features.",
         icon: React.createElement(LuGraduationCap),
-        date: "2019",
+        date: "Feb 2018 - April 2018",
     },
     {
-        title: "Front-End Developer",
-        location: "Orlando, FL",
+        title: "Software Developer",
+        location: "Jakarta, Indonesia",
         description:
-            "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+            "I worked as a Software Developer for 5 years in Mobile Development (Native java, React Native) and Web Development(.Net MVC, Reactjs, PHP). I also upskilled to the full stack and System Analyst. I'm open to full-time opportunities.",
         icon: React.createElement(CgWorkAlt),
-        date: "2019 - 2021",
+        date: "2019 - Present",
     },
     {
-        title: "Full-Stack Developer",
-        location: "Houston, TX",
+        title: "System Analyst",
+        location: "Jakarta, Indonesia",
         description:
-            "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-        icon: React.createElement(FaReact),
-        date: "2021 - present",
+            "For several applications, I am also a system analyst to carry out analysis regarding applications that will be enhanced according to the needs of the user/business analyst. I'm open to full-time opportunities.",
+        icon: React.createElement(CgWorkAlt),
+        date: "2023",
     },
 ] as const;
 
 export const projectsData = [
     {
-        title: "CorpComment",
+        title: "Portfolio Website",
         description:
-            "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-        tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+            "This is my personal project, apart from that, this is learning new technology for me",
+        tags: ["React", "Next.js", "Farmer", "Tailwind"],
         imageUrl: corpcommentImg,
     },
     {
-        title: "rmtDev",
+        title: "Mobile Attendance System",
         description:
-            "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-        tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+            "My final project as a student, a mobile attendance system using QR Code and Location.",
+        tags: ["Native Java", "QR Code", "Fingerprint", "Location Provider", "REST API"],
         imageUrl: rmtdevImg,
     },
     {
-        title: "Word Analytics",
+        title: "OneCircle Mobile App",
         description:
-            "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-        tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+            "A Freelancer mobile app, it is used to help freelancers publish/sell services in various fields and also help clients to communicate with freelancers.",
+        tags: ["Native Java", "REST API", "LARAVEL", "Notification", "Message"],
         imageUrl: wordanalyticsImg,
     },
 ] as const;
 
 export const skillsData = [
+    ".Net MVC",
+    "Native Java",
+    "React Native",
+    "Processmaker",
+    "PHP",
+    "Figma",
+    "Database",
+    "SQL Server",
+    "MySql",
     "HTML",
     "CSS",
     "JavaScript",
@@ -94,14 +103,6 @@ export const skillsData = [
     "Node.js",
     "Git",
     "Tailwind",
-    "Prisma",
-    "MongoDB",
-    "Redux",
-    "GraphQL",
-    "Apollo",
-    "Express",
-    "PostgreSQL",
     "Python",
-    "Django",
     "Framer Motion",
 ] as const;
