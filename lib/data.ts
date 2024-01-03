@@ -5,6 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
+import portfolioImg from '@/public/Portfoliowebsite.png'
 
 export const links = [
     {
@@ -66,7 +67,7 @@ export const projectsData = [
         description:
             "This is my personal project, apart from that, this is learning new technology for me",
         tags: ["React", "Next.js", "Farmer", "Tailwind"],
-        imageUrl: corpcommentImg,
+        imageUrl: portfolioImg,
     },
     {
         title: "Mobile Attendance System",
