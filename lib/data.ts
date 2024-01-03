@@ -46,7 +46,7 @@ export const experiencesData = [
         title: "Software Developer",
         location: "Jakarta, Indonesia",
         description:
-            "I worked as a Software Developer for 5 years in Mobile Development (Native java, React Native) and Web Development(.Net MVC, Reactjs, PHP). I also upskilled to the full stack and System Analyst. I'm open to full-time opportunities.",
+            "I worked as a Software Developer for 5 years in Mobile Development (Native java, React Native) and Web Development(.Net MVC, Reactjs, PHP). I also upskilled to the full stack and System Analyst. I'm open to new opportunities.",
         icon: React.createElement(CgWorkAlt),
         date: "2019 - Present",
     },
@@ -54,7 +54,7 @@ export const experiencesData = [
         title: "System Analyst",
         location: "Jakarta, Indonesia",
         description:
-            "For several applications, I am also a system analyst to carry out analysis regarding applications that will be enhanced according to the needs of the user/business analyst. I'm open to full-time opportunities.",
+            "For several applications, I am also a system analyst to carry out analysis regarding applications that will be enhanced according to the needs of the user/business analyst. I'm open to new opportunities.",
         icon: React.createElement(CgWorkAlt),
         date: "2023",
     },
