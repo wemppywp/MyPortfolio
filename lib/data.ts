@@ -2,6 +2,8 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
+import resultImg from "@/public/result.png";
+import result1Img from "@/public/result1.png";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
@@ -70,18 +72,18 @@ export const projectsData = [
         imageUrl: portfolioImg,
     },
     {
-        title: "Mobile Attendance System",
+        title: "TrackWallet",
         description:
-            "My final project as a student, a mobile attendance system using QR Code and Location.",
-        tags: ["Native Java", "QR Code", "Fingerprint", "Location Provider", "REST API"],
-        imageUrl: rmtdevImg,
+            "This is my personal project. This is a mobile application built with Flutter, this source code available in my github.",
+        tags: ["Flutter", "Node.js", "Express.js", "MySQL", "REST API"],
+        imageUrl: resultImg,
     },
     {
-        title: "OneCircle Mobile App",
+        title: "My Shop",
         description:
-            "A Freelancer mobile app, it is used to help freelancers publish/sell services in various fields and also help clients to communicate with freelancers.",
-        tags: ["Native Java", "REST API", "LARAVEL", "Notification", "Message"],
-        imageUrl: wordanalyticsImg,
+            "This is my personal project. This is a mobile application built with Flutter, this source code available in my github.",
+        tags: ["Flutter", "REST API", "Firebase", "Notification", "Message"],
+        imageUrl: result1Img,
     },
 ] as const;
 
