@@ -1,107 +1,216 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { LuGraduationCap } from "react-icons/lu";
+import {
+  LuAreaChart,
+  LuBriefcase,
+  LuBrainCircuit,
+  LuGraduationCap,
+  LuLayers,
+  LuMapPin,
+  LuSmartphone,
+} from "react-icons/lu";
+import portfolioImg from "@/public/Portfoliowebsite.png";
 import resultImg from "@/public/result.png";
 import result1Img from "@/public/result1.png";
-import portfolioImg from '@/public/Portfoliowebsite.png'
 
 export const links = [
-    {
-        name: "Home",
-        hash: "#home",
-    },
-    {
-        name: "About",
-        hash: "#about",
-    },
-    {
-        name: "Projects",
-        hash: "#projects",
-    },
-    {
-        name: "Skills",
-        hash: "#skills",
-    },
-    {
-        name: "Experience",
-        hash: "#experience",
-    },
-    {
-        name: "Contact",
-        hash: "#contact",
-    },
+  {
+    name: "Home",
+    hash: "#home",
+  },
+  {
+    name: "About",
+    hash: "#about",
+  },
+  {
+    name: "Projects",
+    hash: "#projects",
+  },
+  {
+    name: "Skills",
+    hash: "#skills",
+  },
+  {
+    name: "Experience",
+    hash: "#experience",
+  },
+  {
+    name: "Contact",
+    hash: "#contact",
+  },
+] as const;
+
+export const heroStats = [
+  {
+    value: "6+",
+    label: "years delivering IT applications",
+  },
+  {
+    value: "30%",
+    label: "web performance improvement on enterprise projects",
+  },
+  {
+    value: "60%",
+    label: "faster deployment through automation initiatives",
+  },
+] as const;
+
+export const spotlightCards = [
+  {
+    title: "Business-oriented execution",
+    description:
+      "I translate operational and business needs into scalable applications, clearer workflows, and practical technical decisions.",
+    icon: React.createElement(LuBrainCircuit),
+  },
+  {
+    title: "Full-stack and integration delivery",
+    description:
+      "Hands-on across web, mobile, API integration, database optimization, and release support for business-critical systems.",
+    icon: React.createElement(LuLayers),
+  },
+  {
+    title: "Performance, automation, and UX",
+    description:
+      "Focused on improving performance, deployment flow, system security, and user experience through measurable technical improvements.",
+    icon: React.createElement(LuSmartphone),
+  },
+] as const;
+
+export const quickFacts = [
+  {
+    label: "Role focus",
+    value: "IT Application, system analysis, and full-stack delivery",
+    icon: React.createElement(LuBriefcase),
+  },
+  {
+    label: "Base",
+    value: "Jakarta, Indonesia",
+    icon: React.createElement(LuMapPin),
+  },
+  {
+    label: "Current focus",
+    value: "Scalable systems, API integration, and process automation",
+    icon: React.createElement(LuAreaChart),
+  },
 ] as const;
 
 export const experiencesData = [
-    {
-        title: "Intership at PT Digitdata Terminal Evolution",
-        location: "Medan, Indonesia",
-        description:
-            "Interned as an Android developer, where I learned and helped employees in developing IoT features.",
-        icon: React.createElement(LuGraduationCap),
-        date: "Feb 2018 - April 2018",
-    },
-    {
-        title: "Software Developer",
-        location: "Jakarta, Indonesia",
-        description:
-            "I worked as a Software Developer for 5 years in Mobile Development (Native java, React Native) and Web Development(.Net MVC, Reactjs, PHP). I also upskilled to the full stack and System Analyst. I'm open to new opportunities.",
-        icon: React.createElement(CgWorkAlt),
-        date: "2019 - Present",
-    },
-    {
-        title: "System Analyst",
-        location: "Jakarta, Indonesia",
-        description:
-            "For several applications, I am also a system analyst to carry out analysis regarding applications that will be enhanced according to the needs of the user/business analyst. I'm open to new opportunities.",
-        icon: React.createElement(CgWorkAlt),
-        date: "2023",
-    },
+  {
+    title: "Android Developer Intern",
+    location: "Medan, Indonesia",
+    description:
+      "Contributed to native Android development for an IoT-based smart city project, including UI implementation, API consumption, and feature support for real-time monitoring.",
+    icon: React.createElement(LuGraduationCap),
+    date: "Jun 2017 - Aug 2017",
+  },
+  {
+    title: "IT Application",
+    location: "Jakarta, Indonesia",
+    description:
+      "Built and maintained enterprise web and mobile solutions using C#, .NET Framework, React.js, Vue.js, React Native, Node.js, and PHP while improving performance, security, automation, and system integration.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Feb 2019 - Present",
+  },
+  {
+    title: "System Analysis & Stakeholder Collaboration",
+    location: "Jakarta, Indonesia",
+    description:
+      "Worked directly with business stakeholders to identify technical needs, present solution proposals, and align application improvements with operational goals.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2023 - Present",
+  },
 ] as const;
 
 export const projectsData = [
-    {
-        title: "Portfolio Website",
-        description:
-            "This is my personal project, apart from that, this is learning new technology for me",
-        tags: ["React", "Next.js", "Farmer", "Tailwind"],
-        imageUrl: portfolioImg,
-    },
-    {
-        title: "TrackWallet",
-        description:
-            "This is my personal project. This is a mobile application built with Flutter, this source code available in my github.",
-        tags: ["Flutter", "Node.js", "Express.js", "MySQL", "REST API"],
-        imageUrl: resultImg,
-    },
-    {
-        title: "My Shop",
-        description:
-            "This is my personal project. This is a mobile application built with Flutter, this source code available in my github.",
-        tags: ["Flutter", "REST API", "Firebase", "Notification", "Message"],
-        imageUrl: result1Img,
-    },
+  {
+    title: "Portfolio Website",
+    category: "Web Experience",
+    year: "2026",
+    description:
+      "A personal portfolio app focused on clearer storytelling, stronger visual identity, and a more recruiter-friendly browsing experience.",
+    tags: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
+    highlights: [
+      "Redesigned the landing page with stronger hierarchy and a more premium editorial feel.",
+      "Added project filtering so visitors can quickly focus on web or mobile work.",
+      "Kept the experience responsive and lightweight for both desktop and mobile screens.",
+    ],
+    imageUrl: portfolioImg,
+  },
+  {
+    title: "TrackWallet",
+    category: "Mobile App",
+    year: "Personal Project",
+    description:
+      "A personal finance app built to track spending, manage wallet activity, and practice end-to-end mobile product development.",
+    tags: ["Flutter", "Node.js", "Express.js", "MySQL", "REST API"],
+    highlights: [
+      "Designed to make daily expense logging and wallet tracking simpler.",
+      "Backed by a custom API and database layer for full-stack learning.",
+      "A good example of mobile UI work combined with backend integration.",
+    ],
+    imageUrl: resultImg,
+  },
+  {
+    title: "My Shop",
+    category: "Commerce App",
+    year: "Personal Project",
+    description:
+      "An e-commerce style mobile app exploring product discovery, Firebase integration, and user-facing messaging flows.",
+    tags: ["Flutter", "REST API", "Firebase", "Notifications", "Messaging"],
+    highlights: [
+      "Covers common commerce flows such as browsing, action feedback, and updates.",
+      "Uses Firebase services to support modern app interactions.",
+      "Built as a practical playground for mobile architecture and API consumption.",
+    ],
+    imageUrl: result1Img,
+  },
 ] as const;
 
-export const skillsData = [
-    ".Net MVC",
-    "Native Java",
-    "React Native",
-    "Processmaker",
-    "PHP",
-    "Figma",
-    "Database",
-    "SQL Server",
-    "MySql",
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Node.js",
-    "Git",
-    "Tailwind",
-    "Python",
-    "Framer Motion",
+export const skillGroupsData = [
+  {
+    title: "Frontend",
+    items: [
+      "React",
+      "Next.js",
+      "React.js",
+      "Vue.js",
+      "Angular",
+      "JavaScript",
+      "TypeScript",
+      "HTML",
+      "CSS",
+    ],
+  },
+  {
+    title: "Mobile",
+    items: ["React Native", "Native Android", "Java", "Flutter"],
+  },
+  {
+    title: "Backend & Data",
+    items: [
+      "C#",
+      ".NET Framework",
+      "Node.js",
+      "PHP",
+      "SQL Server",
+      "MySQL",
+      "MongoDB",
+      "Firebase",
+      "REST API",
+    ],
+  },
+  {
+    title: "Workflow & Tools",
+    items: [
+      "AWS",
+      "Azure DevOps",
+      "GitHub",
+      "TFS",
+      "Postman",
+      "Figma",
+      "Git",
+      "OAuth 2.0",
+      "JWT",
+    ],
+  },
 ] as const;

@@ -9,48 +9,74 @@ type ProjectProps = (typeof projectsData)[number];
 
 export default function Project({
   title,
+  category,
+  year,
   description,
   tags,
+  highlights,
   imageUrl,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1.33 1"],
+    offset: ["0 1", "0.8 1"],
   });
 
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.985, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
 
   return (
-    <motion.div
+    <motion.article
       ref={ref}
+      variants={{
+        hidden: { opacity: 0, y: 32 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      transition={{ duration: 0.5 }}
       style={{
         scale: scaleProgress,
         opacity: opacityProgress,
       }}
-      className="group mb-3 sm:mb-8 last:mb-0"
+      whileHover={{ y: -6 }}
+      className="glass-panel group overflow-hidden rounded-[2rem] transition-transform duration-300"
     >
-      <section
-        className="bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden
-    sm:pr-8 relative sm:h-[20rem] mb-3 sm:mb-8 last:mb-0 hover:bg-gray-200 transition
-    sm:group-even:even:pl-8 rounded-lg dark:bg-white/10 dark:hover:bg-white/20 dark:text-white"
-      >
-        <div
-          className="pt-4 pb-8 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col 
-      h-full sm:group-even:ml-[18rem]"
-        >
-          <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
+      <div className="grid gap-8 p-5 sm:p-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div>
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-700 dark:bg-white/10 dark:text-white/70">
+              {category}
+            </span>
+            <span className="text-sm font-medium text-slate-500 dark:text-white/45">
+              {year}
+            </span>
+          </div>
+
+          <h3 className="mt-4 text-2xl font-semibold tracking-tight text-slate-950 dark:text-white sm:text-3xl">
+            {title}
+          </h3>
+
+          <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600 dark:text-white/70">
             {description}
           </p>
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
-            {tags.map((tag, index) => (
+
+          <ul className="mt-6 grid gap-3">
+            {highlights.map((item) => (
               <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider
-          text-white rounded-full dark:text-white/70"
-                key={index}
+                key={item}
+                className="flex items-start gap-3 text-sm leading-6 text-slate-600 dark:text-white/70"
+              >
+                <span className="mt-2 h-2 w-2 rounded-full bg-[var(--accent)]" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+
+          <ul className="mt-6 flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <li
+                className="rounded-full border border-black/10 bg-white/75 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-white/60"
+                key={tag}
               >
                 {tag}
               </li>
@@ -58,17 +84,26 @@ export default function Project({
           </ul>
         </div>
 
-        <Image
-          src={imageUrl}
-          alt="Project I worked on"
-          quality={95}
-          className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
-        transition group-hover:scale-[1.04] group-hover:-translate-x-3 group-hover:translate-y-3 
-        group-hover:-rotate-2 group-even:group-hover:scale-[1.04] 
-        group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 
-        group-even:group-hover:rotate-2 group-even:right-[initial] group-even:-left-40"
-        />
-      </section>
-    </motion.div>
+        <div className="relative">
+          <motion.div
+            className="absolute inset-0 rounded-[1.75rem] bg-[linear-gradient(135deg,rgba(232,143,61,0.2),rgba(125,211,198,0.2))] blur-2xl"
+            whileHover={{ scale: 1.05 }}
+          />
+          <div className="relative overflow-hidden rounded-[1.75rem] border border-black/10 bg-[var(--surface-strong)] p-3 dark:border-white/10 dark:bg-[rgba(255,255,255,0.04)]">
+            <motion.div
+              whileHover={{ scale: 1.035, y: -4 }}
+              transition={{ type: "spring", stiffness: 180, damping: 20 }}
+            >
+              <Image
+                src={imageUrl}
+                alt={`${title} preview`}
+                quality={95}
+                className="h-auto w-full rounded-[1.1rem] object-cover"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </motion.article>
   );
 }
