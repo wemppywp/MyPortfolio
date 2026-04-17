@@ -12,6 +12,8 @@ import {
 import portfolioImg from "@/public/Portfoliowebsite.png";
 import resultImg from "@/public/result.png";
 import result1Img from "@/public/result1.png";
+import result2Img from "@/public/result2.png";
+import PetrolyticsImg from "@/public/Petrolytics.png";
 
 export const links = [
   {
@@ -135,6 +137,46 @@ export const projectsData = [
       "Kept the experience responsive and lightweight for both desktop and mobile screens.",
     ],
     imageUrl: portfolioImg,
+  },
+  {
+    title: "Petrolytics",
+    category: "Web Experience",
+    year: "2026",
+    description:
+      "A real-time Oil Production Analytics Platform that enables monitoring, tracking, and analysis of oil and gas production to support operational efficiency and data-driven decision-making.",
+    tags: [
+      "vite",
+      "TypeScript",
+      "recharts",
+      "Drizzle",
+      "PostgreSQL",
+      "TimescaleDB",
+      "Socket.IO",
+    ],
+    highlights: [
+      "Designed to enable real-time tracking and monitoring of oil and gas production across multiple assets.",
+      "Provides interactive dashboards and analytics to improve production visibility and operational decision-making.",
+      "Implements data integration from multiple sources (e.g., sensors, APIs) for centralized and reliable data processing.",
+      "Built with a scalable full-stack architecture, supporting high-volume time-series data handling.",
+      "Demonstrates end-to-end system development, from data ingestion and processing to visualization and reporting.",
+    ],
+    imageUrl: PetrolyticsImg,
+  },
+  {
+    title: "SmartFinance",
+    category: "Mobile App",
+    year: "Personal Project",
+    description:
+      "Developed a Smart Finance application with features for income and expense tracking, budgeting, savings goal management, and an AI-powered advisor to enhance financial planning and decision-making.",
+    tags: ["Flutter", "Node.js", "Express.js", "Supabase", "REST API"],
+    highlights: [
+      "Designed to simplify tracking of income and expenses with an intuitive and user-friendly interface.",
+      "Provides budgeting and savings goal features to help users manage and plan their finances effectively.",
+      "Integrated with an AI-powered advisor to deliver personalized financial insights and recommendations.",
+      "Built with a full-stack architecture, including custom API and database for scalable financial data management.",
+      "Demonstrates end-to-end development, from mobile UI/UX to backend services and data processing.",
+    ],
+    imageUrl: result2Img,
   },
   {
     title: "TrackWallet",
